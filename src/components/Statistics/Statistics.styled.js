@@ -21,12 +21,9 @@ export const Item = styled.li`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: ${getRandomHexColor()};
 `;
 
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
+
 
 export const Label = styled.span``;
 
