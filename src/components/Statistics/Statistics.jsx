@@ -11,11 +11,10 @@ function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
-
 export const Statistics = ({ stats, title }) => {
   return (
     <StatisticsSection>
-      <Title>{title}</Title>
+      {title && <Title>{title}</Title>}
 
       <StatList>
         {stats.map(({ id, label, percentage }) => (
@@ -37,6 +36,5 @@ Statistics.propTypes = {
       percentage: PropTypes.number.isRequired,
     })
   ),
-  title: PropTypes.string
+  title: PropTypes.string,
 };
-
